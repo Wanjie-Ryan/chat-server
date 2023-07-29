@@ -31,6 +31,13 @@ io.on('connection', (socket)=>{
 
     console.log(socket.id)
 
+    // disconnecting from the server
+
+    socket.on('disconnect', ()=>{
+
+        console.log('disconnected from the socket', socket.id)
+    })
+
 
 })
 
