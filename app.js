@@ -19,7 +19,7 @@ const io = new Server(server, {
 
         //the purpose of the origin is to tell cors that it is ok to accept communication from the react localhost 3000
 
-        origin:'https://ryanchats.vercel.app/',
+        origin:'http://localhost:3000/',
         methods:['GET', 'POST']
 
     }
