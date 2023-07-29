@@ -19,7 +19,7 @@ const io = new Server(server, {
 
         //the purpose of the origin is to tell cors that it is ok to accept communication from the react localhost 3000
 
-        origin:'https://chat-client-psi-livid.vercel.app/',
+        origin:'https://ryanchats.vercel.app/',
         methods:['GET', 'POST']
 
     }
@@ -58,7 +58,14 @@ io.on('connection', (socket)=>{
 })
 
 
+app.get("/wake-up", (req, res) => {
 
+    res.json({
+      responseType: "success",
+      message: "Server is awake",
+    });
+
+  });
 
 
 
