@@ -29,7 +29,7 @@ const io = new Server(server, {
 
 io.on('connection', (socket)=>{
 
-    console.log(socket.id)
+    console.log(`User connected: ${socket.id}`)
 
     // disconnecting from the server
 
