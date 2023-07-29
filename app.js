@@ -38,6 +38,11 @@ io.on('connection', (socket)=>{
 
     })
 
+    socket.on('send_message', (data)=>{
+
+        console.log(data)
+    })
+
     // disconnecting from the server
 
     socket.on('disconnect', ()=>{
