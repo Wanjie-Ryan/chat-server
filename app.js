@@ -29,7 +29,7 @@ const io = new Server(server, {
 
 io.on('connection', (socket)=>{
 
-    console.log(`User connected: ${socket.id}`)
+    // console.log(`User connected: ${socket.id}`)
 
     socket.on('join_room', (data)=>{
 
@@ -40,7 +40,11 @@ io.on('connection', (socket)=>{
 
     socket.on('send_message', (data)=>{
 
-        console.log(data)
+        // console.log(data)
+
+        // emiiting the data that has been sent to the backend, to the frontend to that specific room id that has been passed....
+
+        socket.to(data.room).emit('received-message', data)
     })
 
     // disconnecting from the server
